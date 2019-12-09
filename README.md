@@ -7,21 +7,21 @@ Swagger can be accessed at the following URL: http://localhost:8080/swagger-ui.h
 ## Prerequisites
 * Docker must be installed to build and run using the following commands. See the following reference for information about installing Docker Compose: https://docs.docker.com/compose/install/#install-compose
 ## Building Locally
-```bash
+```shell script
 $ docker-compose build
 ```
 ## Running Locally
-```bash
+```shell script
 $ docker-compose up
 ```
 ## Restarting For Code Changes
-```bash
+```shell script
 $ docker-compose down
 $ docker-combose build
 $ docker-compose up
 ```
 ## Restarting For Database Changes
-```bash
+```shell script
 $ docker-compose down -v
 $ docker-combose build
 $ docker-compose up
@@ -39,4 +39,15 @@ CREATE TABLE true_to_size (
     true_to_size_value INTEGER NOT NULL,
     shoe_id INTEGER REFERENCES shoe(shoe_id)
 );
+```
+### Sonar
+This project includes a docker image for SonarQube static code analysis. Use the following commands to start an instance and run a report.
+##### Start Local Sonar Server
+```shell script
+$ cd sonar
+$ docker-compose up
+```
+##### Run Report (From Project Root Directory)
+```shell script
+$ . ./sonar.sh
 ```
