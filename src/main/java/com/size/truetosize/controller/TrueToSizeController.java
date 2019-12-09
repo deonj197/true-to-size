@@ -30,12 +30,18 @@ public class TrueToSizeController {
 
     @GetMapping("/trueToSize/{shoe_id}")
     public List<TrueToSize> getAllTrueToSize(@PathVariable(value = "shoe_id") final Long shoeId) {
-        return trueToSizeService.findAllByShoeId(shoeId);
+        log.info("Starting GET /trueToSize/{shoe_id} for shoe_id: {}", shoeId);
+        final List<TrueToSize> trueToSizeList = trueToSizeService.findAllByShoeId(shoeId);
+        log.info("Finishing GET /trueToSize/{shoe_id} for shoe_id: {}", shoeId);
+        return trueToSizeList;
     }
 
     @GetMapping("/trueToSize/calculation/{shoe_id}")
     public TrueToSizeCalculation getTrueToSizeCalculation(@PathVariable(value = "shoe_id") final Long shoeId) {
-        return trueToSizeService.computeTrueToSizeCalculation(shoeId);
+        log.info("Starting GET /trueToSize/calculation/{shoe_id} for shoe_id: {}", shoeId);
+        final TrueToSizeCalculation trueToSizeCalculation = trueToSizeService.computeTrueToSizeCalculation(shoeId);
+        log.info("Finishing GET /trueToSize/calculation/{shoe_id} for shoe_id: {}", shoeId);
+        return trueToSizeCalculation;
     }
 
 }
