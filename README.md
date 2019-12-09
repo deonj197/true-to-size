@@ -1,5 +1,5 @@
 ## Description
-This service allows users to load in crowd-sourced data to use in calculating the accuracy of shoe sizes. Once sufficient data is available, users can specify the shoe they want the true to size calculation for and receive it via a `GET` request to the API.
+This service allows users to load in crowd-sourced data to use in calculating the accuracy of shoe sizes. Once sufficient data is available, users can specify the shoe they want the true to size calculation for and receive it via a `GET` request to the API. There are also sufficent endpoints on the API for loading in the data itself.
 
 ## Swagger
 This service is complete with Swagger API functionality to make sending requests as straightforward as possible.
