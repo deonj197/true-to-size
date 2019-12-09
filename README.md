@@ -53,7 +53,7 @@ $ cd sonar
 $ docker-compose up
 ```
 #### Run Report (From Project Root Directory)
-THIS IS OPTIONAL. Running the actual sonar report requires you to have maven installed locally and a valid settings.xml file on your machine. This is NOT required for building or running the app. It is up to you if you want to do this part. I don't recommend it unless you are familiar with maven. It is nice to see the metrics on the code, such as coverage, smells, and vulnerabilities but as of current, I don't have a way to run the report itself in a docker container. I used this to analyze my code during development and ensure optimal code quality.
+THIS IS OPTIONAL. Running the actual sonar report requires you to have maven installed locally and a valid settings.xml file on your machine. This is NOT required for building or running the app. It is up to you if you want to do this part. I don't recommend it unless you are familiar with maven. It is nice to see the metrics on the code, such as coverage, smells, and vulnerabilities but as of current, I don't have a way to run the report itself in a docker container. Only the local sonar server is containerized, as seen above. I used this to analyze my code during development and ensure optimal code quality.
 ```shell script
 $ mvn clean install
 $ . ./sonar.sh
