@@ -26,6 +26,11 @@ $ docker-compose down -v
 $ docker-combose build
 $ docker-compose up
 ```
+### Restarting With No Code or DB Changes
+```shell script
+$ docker-compose down
+$ docker-compose up
+```
 ### Database Structure
 The inluded Postgres database includes the following structure.
 ```sql
