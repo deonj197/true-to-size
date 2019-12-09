@@ -5,6 +5,7 @@ services:
     network_mode: bridge
     container_name: true_size_postgres_db
     volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - postgres-data:/var/lib/postgresql/data
     expose:
       - 5432
@@ -12,8 +13,8 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_PASSWORD=admin
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=true-size-db
+      - POSTGRES_USER=true_size_admin
+      - POSTGRES_DB=true_size
     restart: unless-stopped
   app:
     build: .
